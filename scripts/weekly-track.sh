@@ -128,6 +128,7 @@ echo "✅ 報告已生成: $REPORT_FILE"
 if [ "$RESEARCH_TRIGGER" = "yes" ]; then
     echo "🔬 執行深度調研..."
     
+    mkdir -p "$RESEARCH/bottlenecks"
     RESEARCH_DIR="$RESEARCH/bottlenecks/weekly-${WEEK}.md"
     
     cat > "$RESEARCH_DIR" <<'RESEARCHEOF'
