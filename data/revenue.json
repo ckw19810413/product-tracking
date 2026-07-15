@@ -1,0 +1,39 @@
+{
+  "products": {
+    "ai_prompt_library": {
+      "name": "繁體 AI Prompt 庫",
+      "gumroad_url": "",
+      "lemonsqueezy_url": "",
+      "price": 49,
+      "currency": "USD",
+      "status": "pending",
+      "sales_count": 0,
+      "revenue": 0,
+      "notes": ""
+    },
+    "ai_practical_course": {
+      "name": "繁體中文 AI 實戰課程",
+      "gumroad_url": "",
+      "lemonsqueezy_url": "",
+      "price": 297,
+      "currency": "USD",
+      "status": "pending",
+      "sales_count": 0,
+      "revenue": 0,
+      "notes": ""
+    },
+    "feishu_template_marketplace": {
+      "name": "飛書模板市集",
+      "gumroad_url": "",
+      "lemonsqueezy_url": "",
+      "price": 29,
+      "currency": "USD",
+      "status": "pending",
+      "sales_count": 0,
+      "revenue": 0,
+      "notes": ""
+    }
+  },
+  "weekly_revenue": [],
+  "last_updated": "2026-07-15"
+}

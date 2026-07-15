@@ -1,0 +1,5 @@
+# 產品上架追蹤
+# 格式：產品|平台_URL|上架日期
+prompt|https://gumroad.com/l/YOUR_PROMPT_URL|
+course|https://gumroad.com/l/YOUR_COURSE_URL|
+template|https://gumroad.com/l/YOUR_TEMPLATE_URL|
