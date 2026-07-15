@@ -2,7 +2,7 @@
 # 數位商品銷售追蹤 & 瓶頸調研系統
 # 由 cron job 每週一 10:00 AM 自動執行
 
-REPO_DIR="/home/wayne/workspace/hermes-agent/projects/product-tracking"
+REPO_DIR="/home/wayne/workspace/hermes-agent/github/ckw19810413/product-tracking"
 TRACKER="$REPO_DIR/data"
 REPORTS="$REPO_DIR/reports"
 RESEARCH="$REPO_DIR/research"
