@@ -1,0 +1,98 @@
+{
+  "description": "自動推文內容日曆",
+  "total_days": 7,
+  "products": {
+    "prompt": "https://slashmaster6.gumroad.com/l/saxrwt",
+    "course": "https://slashmaster6.gumroad.com/l/mgtpcn",
+    "templates": "https://slashmaster6.gumroad.com/l/obpgqo"
+  },
+  "posts": [
+    {
+      "day": 1,
+      "type": "educational",
+      "title": "痛點共鳴",
+      "content": "你是不是也在想：\n• ChatGPT 寫的內容太生硬？\n• 寫信寫到頭昏腦脹？\n• 做簡報花一整天卻不夠好？\n\n問題不在你，是工具不對。\n\n明天分享一套「繁體中文 AI 工作流」，幫你省下 80% 時間。\n\n👇 追蹤我，明天見。\n\n#AI #繁體中文 #ChatGPT",
+      "hashtags": [
+        "AI",
+        "繁體中文",
+        "ChatGPT"
+      ],
+      "cta": "follow",
+      "url": ""
+    },
+    {
+      "day": 2,
+      "type": "teaser",
+      "title": "預熱",
+      "content": "我們花了 3 個月測試 500+ prompts，\n最後只挑出 100 個真正有效的。\n\n為什麼不直接賣 500 個？\n因為品質比數量重要 100 倍。\n\n❓ 你最近用 ChatGPT 最失敗的一次經驗是什麼？\n（留言分享，我幫你想 prompt 解法）\n\n#Prompt #AI工具",
+      "hashtags": [
+        "Prompt",
+        "AI工具"
+      ],
+      "cta": "engage",
+      "url": ""
+    },
+    {
+      "day": 3,
+      "type": "value",
+      "title": "價值輸出",
+      "content": "教你一個 ChatGPT 寫作必殺技：\n\n❌ 錯誤寫法：\n「請幫我寫一篇文章」\n\n✅ 正確寫法：\n「你是一位 [角色]。請幫我寫一篇 [主題] 的文章。\n目標受眾：[誰]。\n風格：[語氣]。\n字數：[限制]。」\n\n差異在哪？細節。\n\n明天上架一套完整 prompt 庫，包含 100 個已測試的模板。\n\n#ChatGPT技巧 #AI教學",
+      "hashtags": [
+        "ChatGPT技巧",
+        "AI教學"
+      ],
+      "cta": "follow",
+      "url": ""
+    },
+    {
+      "day": 4,
+      "type": "launch",
+      "title": "上架日",
+      "content": "🎉 我們的「繁體 AI Prompt 庫」正式上線了！\n\n100 個高品質 prompt，不是廉價合集。\n涵蓋：商務、內容、效率、進階應用。\n\n💰 早鳥價：$49（約一杯手搖飲）\n📦 內含：完整 prompt 模板 + 使用指南 + 免費更新\n\n👉 立即取得：https://slashmaster6.gumroad.com/l/saxrwt\n\n前 50 名購買者：額外贈送「社群經營 10 大 prompt」\n\n#AI #Prompt庫 #Gumroad",
+      "hashtags": [
+        "AI",
+        "Prompt庫",
+        "Gumroad"
+      ],
+      "cta": "purchase",
+      "url": "https://slashmaster6.gumroad.com/l/saxrwt"
+    },
+    {
+      "day": 5,
+      "type": "social_proof",
+      "title": "客戶回饋",
+      "content": "剛剛收到第一筆購買回饋：\n\n「用了第 12 號 prompt 寫客戶郵件，回覆率提升 30%！」\n— 已購買的用戶\n\n你的下一封客戶郵件，不用自己想了。\n👉 {PRODUCT_LINKS['prompt']}\n\n#AI工具 #繁體中文",
+      "hashtags": [
+        "AI工具",
+        "繁體中文"
+      ],
+      "cta": "purchase",
+      "url": "https://slashmaster6.gumroad.com/l/saxrwt"
+    },
+    {
+      "day": 6,
+      "type": "tools",
+      "title": "工具列表（你剛才發布的內容）",
+      "content": "數位創作者必懂的 15 大 AI 工具：\n\n🎨 創意生成器\n• Midjourney - 文生圖\n• Runway ML - 影片生成\n• Pictory - 影片轉短內容\n\n📊 效率工具\n• Notion AI - 文件管理\n• Zapier AI - 自動化\n• ChatGPT - 全能助手\n\n💰 變現工具\n• Gumroad - 產品銷售\n• Stripe - 付款處理\n• ConvertKit - 郵件行銷\n\n📱 社群工具\n• Buffer - 排程貼文\n• HypeAuditor - 影響力分析\n• Sprout Social - 社群管理\n\n🎓 學習平台\n• Coursera - 線上課程\n• Udemy - 技能提升\n• Skillshare - 創意課程\n\n全都有中文版本或繁體支援！\n\n#數位產品 #AI工具 #自動化",
+      "hashtags": [
+        "數位產品",
+        "AI工具",
+        "自動化"
+      ],
+      "cta": "engage",
+      "url": ""
+    },
+    {
+      "day": 7,
+      "type": "course_promo",
+      "title": "課程推廣",
+      "content": "想系統學習 AI？不需要懂程式！\n\n我們的「AI 實戰課程」：\n✅ 4 單元，17 堂完整課程\n✅ 繁體中文教學\n✅ 學完就能用\n\n💰 早鳥價 $297（原價 $497）\n👉 https://slashmaster6.gumroad.com/l/mgtpcn\n\n#AI實戰 #線上課程",
+      "hashtags": [
+        "AI實戰",
+        "線上課程"
+      ],
+      "cta": "purchase",
+      "url": "https://slashmaster6.gumroad.com/l/mgtpcn"
+    }
+  ]
+}
