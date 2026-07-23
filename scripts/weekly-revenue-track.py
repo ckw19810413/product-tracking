@@ -64,16 +64,23 @@ def fetch_all_data():
     # Products (pagination)
     all_products = []
     params = "products"
-    while True:
+    max_pages = 10
+    last_key = None
+    for page in range(max_pages):
         resp = gumroad_get(params)
         if not resp.get("success"):
             print(f"  ERROR fetching products: {resp.get('error')}", file=sys.stderr)
             break
-        all_products.extend(resp.get("products", []))
+        products_page = resp.get("products", [])
+        if not products_page:
+            break  # No more products
+        all_products.extend(products_page)
         next_key = resp.get("next_page_key")
-        if not next_key:
-            break
+        if not next_key or next_key == last_key:
+            break  # No more pages or infinite loop detected
+        last_key = next_key
         params = f"products?page_token={next_key}"
+    print(f"  Fetched {len(all_products)} products (across pages)")
 
     # Dedup by id, keep best version
     seen_ids = {}
