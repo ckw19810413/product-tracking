@@ -31,7 +31,8 @@ GUMROAD_BASE = "https://api.gumroad.com/v2"
 def gumroad_get(endpoint):
     """Fetch from Gumroad API using curl (reliable)."""
     token = open(TOKEN_FILE).read().strip()
-    url = f"{GUMROAD_BASE}/{endpoint}?access_token={token}"
+    sep = "&" if "?" in endpoint else "?"
+    url = f"{GUMROAD_BASE}/{endpoint}{sep}access_token={token}"
     try:
         result = subprocess.run(
             ["curl", "-s", "-f", "--connect-timeout", "10", url],
