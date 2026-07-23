@@ -1,0 +1,97 @@
+{
+  "date": "2026-07-23",
+  "week": "2026-W30",
+  "account": {
+    "name": "Kai Wei Chang",
+    "currency_type": "usd",
+    "bio": null,
+    "twitter_handle": null,
+    "id": "9668593739853",
+    "user_id": "YHFtCKxa4hXUdE4eDpetcQ==",
+    "url": "https://slashmaster6.gumroad.com",
+    "profile_picture_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
+    "links": [
+      "ysdih",
+      "njserv",
+      "kuvajr",
+      "bppdqp",
+      "diwoc",
+      "vzalgb",
+      "xohjh",
+      "kbxuuc",
+      "gtfpmc",
+      "mgtpcn",
+      "obpgqo"
+    ],
+    "profile_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
+    "email": "slashman413@gmail.com",
+    "display_name": "Kai Wei Chang"
+  },
+  "sales_count": 0,
+  "total_revenue_cents": 0,
+  "products": [
+    {
+      "name": "飛書模板市集",
+      "price": "$29",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/obpgqo",
+      "has_cover": false,
+      "has_file": false
+    },
+    {
+      "name": "繁體中文 AI 實戰課程",
+      "price": "$297",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/mgtpcn",
+      "has_cover": false,
+      "has_file": false
+    },
+    {
+      "name": "飛書模板市集",
+      "price": "$29",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/gtfpmc",
+      "has_cover": false,
+      "has_file": true
+    },
+    {
+      "name": "台股 ETF 智能分析儀表板 — Premium 會員",
+      "price": "$19",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/kbxuuc",
+      "has_cover": true,
+      "has_file": false
+    },
+    {
+      "name": "飛書模板市集 — 中文世界第一套專業的飛書/釘釘工作模板",
+      "price": "$197",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/xohjh",
+      "has_cover": true,
+      "has_file": true
+    },
+    {
+      "name": "繁體中文 AI 實戰課程 — 4 單元 17 堂，從零到進階的 AI 應用教學",
+      "price": "$297",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/vzalgb",
+      "has_cover": true,
+      "has_file": true
+    },
+    {
+      "name": "繁體 AI Prompt 庫 — 100 個高品質繁體中文 AI 提示詞，即拷即用",
+      "price": "$49",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/diwoc",
+      "has_cover": true,
+      "has_file": true
+    }
+  ]
+}
