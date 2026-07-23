@@ -1,5 +1,8 @@
 # 產品上架追蹤
 # 格式：產品|平台_URL|上架日期
-ai-prompt-library|https://slashmaster6.gumroad.com/l/saxrwt|2026-07-18|
-ai-practical-course|https://slashmaster6.gumroad.com/l/mgtpcn|2026-07-18|
-feishu-templates|https://slashmaster6.gumroad.com/l/obpgqo|2026-07-18|
+# Gumroad 帳號: slashmaster6 (kaiwei Chang)
+ai-prompt-library|https://slashmaster6.gumroad.com/l/diwoc|2026-07-15
+ai-practical-course|https://slashmaster6.gumroad.com/l/vzalgb|2026-07-15
+feishu-templates-single|https://slashmaster6.gumroad.com/l/obpgqo|2026-07-15
+feishu-templates-bundle|https://slashmaster6.gumroad.com/l/xohjh|2026-07-15
+etf-dashboard|https://slashmaster6.gumroad.com/l/kbxuuc|2026-07-15
