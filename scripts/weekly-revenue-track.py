@@ -82,21 +82,23 @@ def fetch_all_data():
         params = f"products?page_token={next_key}"
     print(f"  Fetched {len(all_products)} products (across pages)")
 
-    # Dedup by id, keep best version
-    seen_ids = {}
+    # Dedup by name (lowercased), keep best version
+    # Gumroad creates duplicate entries with different IDs for the same product
+    seen_names = {}
     for p in all_products:
-        pid = p.get("id")
-        if not pid:
+        name = p.get("name", "Unknown").strip().lower()
+        if not name:
             continue
-        if pid in seen_ids:
-            old = seen_ids[pid]
+        if name in seen_names:
+            old = seen_names[name]
             old_score = (1 if old.get("published") else 0) + (1 if old.get("covers") else 0) + (1 if old.get("file_info") and old["file_info"] else 0)
             new_score = (1 if p.get("published") else 0) + (1 if p.get("covers") else 0) + (1 if p.get("file_info") and p["file_info"] else 0)
             if new_score > old_score:
-                seen_ids[pid] = p
+                seen_names[name] = p
         else:
-            seen_ids[pid] = p
-    all_products = list(seen_ids.values())
+            seen_names[name] = p
+    all_products = list(seen_names.values())
+    print(f"  After dedup by name: {len(all_products)} unique products")
 
     published = [p for p in all_products if p.get("published")]
     drafts = [p for p in all_products if not p.get("published")]
