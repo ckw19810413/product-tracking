@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-24",
-  "week": "2026-W30",
+  "date": "2026-07-27",
+  "week": "2026-W31",
   "account": {
     "name": "Kai Wei Chang",
     "currency_type": "usd",
@@ -18,10 +18,8 @@
       "diwoc",
       "vzalgb",
       "xohjh",
-      "kbxuuc",
-      "gtfpmc",
-      "mgtpcn",
-      "obpgqo"
+      "saxrwt",
+      "mgtpcn"
     ],
     "profile_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
     "email": "slashman413@gmail.com",
@@ -31,17 +29,8 @@
   "total_revenue_cents": 0,
   "products": [
     {
-      "name": "飛書模板市集",
-      "price": "$29",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/gtfpmc",
-      "has_cover": false,
-      "has_file": true
-    },
-    {
-      "name": "繁體中文 AI 實戰課程",
-      "price": "$297",
+      "name": "Ship With AI: The 4-Hour Course to Automate Real Work (No Code)",
+      "price": "$99",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/mgtpcn",
@@ -49,13 +38,13 @@
       "has_file": false
     },
     {
-      "name": "台股 ETF 智能分析儀表板 — Premium 會員",
-      "price": "$19",
+      "name": "The AI Prompt Library — 300+ Battle-Tested Prompts for Real Work",
+      "price": "$29",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/kbxuuc",
+      "short_url": "https://slashmaster6.gumroad.com/l/saxrwt",
       "has_cover": true,
-      "has_file": false
+      "has_file": true
     },
     {
       "name": "飛書模板市集 — 中文世界第一套專業的飛書/釘釘工作模板",
@@ -63,24 +52,6 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/xohjh",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "繁體中文 AI 實戰課程 — 4 單元 17 堂，從零到進階的 AI 應用教學",
-      "price": "$297",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/vzalgb",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "繁體 AI Prompt 庫 — 100 個高品質繁體中文 AI 提示詞，即拷即用",
-      "price": "$49",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/diwoc",
       "has_cover": true,
       "has_file": true
     }
