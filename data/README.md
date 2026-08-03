@@ -5,9 +5,16 @@
 | 產品 | 狀態 | 上架平台 | 價格 | 銷售量 | 收入 | 最後更新 |
 
 |------|------|---------|------|--------|------|---------|
-| Ship With AI: The 4-Hour Course to Automate Real Work (No Code) | ⚠️ 待優化 | Gumroad | $99 | 0 | $0.00 | 2026-07-27 |
-| The AI Prompt Library — 300+ Battle-Tested Prompts for Real Work | ✅ 可購買 | Gumroad | $29 | 0 | $0.00 | 2026-07-27 |
-| 飛書模板市集 — 中文世界第一套專業的飛書/釘釘工作模板 | ✅ 可購買 | Gumroad | $197 | 0 | $0.00 | 2026-07-27 |
+| AI Developer Stack Bundle: Orchestrate, Ship & Host | ✅ 可購買 | Gumroad | $199 | 0 | $0.00 | 2026-08-03 |
+| AI Starter Bundle: Learn, Prompt & Ship | ✅ 可購買 | Gumroad | $149 | 0 | $0.00 | 2026-08-03 |
+| ETF 儀表板 | ✅ 可購買 | Gumroad | $199 | 0 | $0.00 | 2026-08-03 |
+| Cowork Pro | ✅ 可購買 | Gumroad | $99.99+ | 0 | $0.00 | 2026-08-03 |
+| Ship With AI: The 4-Hour Course to Automate Real Work (No Code) | ✅ 可購買 | Gumroad | $99.99 | 0 | $0.00 | 2026-08-03 |
+| 飛書模板市集 | ✅ 可購買 | Gumroad | $49 | 0 | $0.00 | 2026-08-03 |
+| 繁體中文 AI 實戰課程 — 4 單元 17 堂，從零到進階的 AI 應用教學 | ✅ 可購買 | Gumroad | $99 | 0 | $0.00 | 2026-08-03 |
+| AI Prompt 庫 | ✅ 可購買 | Gumroad | $29 | 0 | $0.00 | 2026-08-03 |
+| DGX Spark Qwen 3.6 Dual-Model LLM Deployment Kit | ✅ 可購買 | Gumroad | $99.99 | 0 | $0.00 | 2026-08-03 |
+| SAAS Starter Kit | ✅ 可購買 | Gumroad | $99.99 | 0 | $0.00 | 2026-08-03 |
 
 ## 行銷渠道追蹤
 
@@ -32,4 +39,4 @@
 
 |------|------|--------|------|
 
-| 2026-W31 | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |
+| 2026-W32 | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |
