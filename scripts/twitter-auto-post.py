@@ -63,10 +63,17 @@ def send_tweet(text, media_id=None):
         record_sent_tweet(text)
         return True
     elif response.status_code == 403:
-        # Duplicate content — mark as sent to prevent future loops
-        print(f"❌ 發布失敗 (403 duplicate): {response.text[:200]}")
-        print(f"   ⚠️ 已標記為 sent (防止重複嘗試)")
-        record_sent_tweet(text)
+        body = response.text
+        if "duplicate" in body.lower():
+            # Duplicate content — mark as sent to prevent future loops
+            print(f"❌ 發布失敗 (403 duplicate): {body[:200]}")
+            print(f"   ⚠️ 已標記為 sent (防止重複嘗試)")
+            record_sent_tweet(text)
+        else:
+            # Other 403 (e.g. account restricted / not permitted) — do NOT mark
+            # as sent, otherwise the tweet is silently dropped without posting.
+            print(f"❌ 發布失敗 (403): {body[:200]}")
+            print(f"   ⚠️ 未標記為 sent (保留待重試)")
         return False
     elif response.status_code == 401:
         print(f"❌ 發布失敗 (401 auth): {response.text[:200]}")

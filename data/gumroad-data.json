@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-03",
-  "week": "2026-W32",
+  "date": "2026-08-10",
+  "week": "2026-W33",
   "account": {
     "name": "Kai Wei Chang",
     "currency_type": "usd",
@@ -16,12 +16,16 @@
       "bppdqp",
       "diwoc",
       "vzalgb",
-      "xohjh",
-      "mgtpcn",
-      "xfhfps",
+      "feishu-templates",
+      "ship-with-ai",
+      "cowork-pro",
       "etf-dashboard",
-      "lapcqb",
-      "nulyms"
+      "ai-starter-bundle",
+      "ai-dev-stack",
+      "ai-workflow-builder",
+      "everything-bundle",
+      "prompt-library-sample",
+      "workflow-builder-sample"
     ],
     "profile_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
     "email": "slashman413@gmail.com",
@@ -31,26 +35,62 @@
   "total_revenue_cents": 0,
   "products": [
     {
-      "name": "AI Developer Stack Bundle: Orchestrate, Ship & Host",
+      "name": "AI Workflow Builder — Free Sample Workflow",
+      "price": "$0+",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/workflow-builder-sample",
+      "has_cover": true,
+      "has_file": true
+    },
+    {
+      "name": "AI Prompt Library — Free Sample (12 Real Prompts)",
+      "price": "$0+",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/prompt-library-sample",
+      "has_cover": true,
+      "has_file": true
+    },
+    {
+      "name": "Slashman Tools Everything Bundle — 12 Products + All Future Releases",
       "price": "$199",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/nulyms",
+      "short_url": "https://slashmaster6.gumroad.com/l/everything-bundle",
+      "has_cover": true,
+      "has_file": true
+    },
+    {
+      "name": "AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows",
+      "price": "$99",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/ai-workflow-builder",
+      "has_cover": true,
+      "has_file": true
+    },
+    {
+      "name": "AI Developer Stack Bundle: Orchestrate, Ship & Host",
+      "price": "$79",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/ai-dev-stack",
       "has_cover": true,
       "has_file": true
     },
     {
       "name": "AI Starter Bundle: Learn, Prompt & Ship",
-      "price": "$149",
+      "price": "$49",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/lapcqb",
+      "short_url": "https://slashmaster6.gumroad.com/l/ai-starter-bundle",
       "has_cover": true,
       "has_file": true
     },
     {
-      "name": "ETF 儀表板",
-      "price": "$199",
+      "name": "ETF Dashboard — Track Taiwan High-Yield & Global ETFs",
+      "price": "$29",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/etf-dashboard",
@@ -59,64 +99,28 @@
     },
     {
       "name": "Cowork Pro",
-      "price": "$99.99+",
+      "price": "$59",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/xfhfps",
+      "short_url": "https://slashmaster6.gumroad.com/l/cowork-pro",
       "has_cover": true,
-      "has_file": false
+      "has_file": true
     },
     {
       "name": "Ship With AI: The 4-Hour Course to Automate Real Work (No Code)",
-      "price": "$99.99",
+      "price": "$39",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/mgtpcn",
+      "short_url": "https://slashmaster6.gumroad.com/l/ship-with-ai",
       "has_cover": true,
       "has_file": true
     },
     {
-      "name": "飛書模板市集",
-      "price": "$49",
+      "name": "Feishu (Lark) Template Marketplace — 13 Ready-to-Use Team Templates",
+      "price": "$19",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/xohjh",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "繁體中文 AI 實戰課程 — 4 單元 17 堂，從零到進階的 AI 應用教學",
-      "price": "$99",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/vzalgb",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "AI Prompt 庫",
-      "price": "$29",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/diwoc",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "DGX Spark Qwen 3.6 Dual-Model LLM Deployment Kit",
-      "price": "$99.99",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/bppdqp",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "SAAS Starter Kit",
-      "price": "$99.99",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/kuvajr",
+      "short_url": "https://slashmaster6.gumroad.com/l/feishu-templates",
       "has_cover": true,
       "has_file": true
     }

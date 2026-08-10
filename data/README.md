@@ -5,16 +5,16 @@
 | 產品 | 狀態 | 上架平台 | 價格 | 銷售量 | 收入 | 最後更新 |
 
 |------|------|---------|------|--------|------|---------|
-| AI Developer Stack Bundle: Orchestrate, Ship & Host | ✅ 可購買 | Gumroad | $199 | 0 | $0.00 | 2026-08-03 |
-| AI Starter Bundle: Learn, Prompt & Ship | ✅ 可購買 | Gumroad | $149 | 0 | $0.00 | 2026-08-03 |
-| ETF 儀表板 | ✅ 可購買 | Gumroad | $199 | 0 | $0.00 | 2026-08-03 |
-| Cowork Pro | ✅ 可購買 | Gumroad | $99.99+ | 0 | $0.00 | 2026-08-03 |
-| Ship With AI: The 4-Hour Course to Automate Real Work (No Code) | ✅ 可購買 | Gumroad | $99.99 | 0 | $0.00 | 2026-08-03 |
-| 飛書模板市集 | ✅ 可購買 | Gumroad | $49 | 0 | $0.00 | 2026-08-03 |
-| 繁體中文 AI 實戰課程 — 4 單元 17 堂，從零到進階的 AI 應用教學 | ✅ 可購買 | Gumroad | $99 | 0 | $0.00 | 2026-08-03 |
-| AI Prompt 庫 | ✅ 可購買 | Gumroad | $29 | 0 | $0.00 | 2026-08-03 |
-| DGX Spark Qwen 3.6 Dual-Model LLM Deployment Kit | ✅ 可購買 | Gumroad | $99.99 | 0 | $0.00 | 2026-08-03 |
-| SAAS Starter Kit | ✅ 可購買 | Gumroad | $99.99 | 0 | $0.00 | 2026-08-03 |
+| AI Workflow Builder — Free Sample Workflow | ✅ 可購買 | Gumroad | $0+ | 0 | $0.00 | 2026-08-10 |
+| AI Prompt Library — Free Sample (12 Real Prompts) | ✅ 可購買 | Gumroad | $0+ | 0 | $0.00 | 2026-08-10 |
+| Slashman Tools Everything Bundle — 12 Products + All Future Releases | ✅ 可購買 | Gumroad | $199 | 0 | $0.00 | 2026-08-10 |
+| AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows | ✅ 可購買 | Gumroad | $99 | 0 | $0.00 | 2026-08-10 |
+| AI Developer Stack Bundle: Orchestrate, Ship & Host | ✅ 可購買 | Gumroad | $79 | 0 | $0.00 | 2026-08-10 |
+| AI Starter Bundle: Learn, Prompt & Ship | ✅ 可購買 | Gumroad | $49 | 0 | $0.00 | 2026-08-10 |
+| ETF Dashboard — Track Taiwan High-Yield & Global ETFs | ✅ 可購買 | Gumroad | $29 | 0 | $0.00 | 2026-08-10 |
+| Cowork Pro | ✅ 可購買 | Gumroad | $59 | 0 | $0.00 | 2026-08-10 |
+| Ship With AI: The 4-Hour Course to Automate Real Work (No Code) | ✅ 可購買 | Gumroad | $39 | 0 | $0.00 | 2026-08-10 |
+| Feishu (Lark) Template Marketplace — 13 Ready-to-Use Team Templates | ✅ 可購買 | Gumroad | $19 | 0 | $0.00 | 2026-08-10 |
 
 ## 行銷渠道追蹤
 
@@ -39,4 +39,4 @@
 
 |------|------|--------|------|
 
-| 2026-W32 | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |
+| 2026-W33 | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |
