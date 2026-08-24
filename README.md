@@ -13,18 +13,21 @@ product-tracking/
 ├── data/            # Sales data storage (JSON, CSV)
 ├── reports/         # Generated weekly revenue reports
 ├── scripts/         # Automation & data processing scripts
-│   └── landing-page/# Next.js landing page for reports
+├── landing-page/    # Next.js landing page for reports
 └── research/        # Market research & analysis docs
 ```
 
 ## Getting Started
 
 ```bash
+# Navigate to the landing page
+cd landing-page
+
 # Install dependencies
-npm install
+pnpm install
 
 # Start the dev server
-npm run dev
+pnpm dev
 ```
 
 ## Features
