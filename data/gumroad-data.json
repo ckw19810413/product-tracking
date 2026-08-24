@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-17",
-  "week": "2026-W34",
+  "date": "2026-08-24",
+  "week": "2026-W35",
   "account": {
     "name": "Kai Wei Chang",
     "currency_type": "usd",
@@ -103,15 +103,6 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/cowork-pro",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "Ship With AI: The 4-Hour Course to Automate Real Work (No Code)",
-      "price": "$39",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/ship-with-ai",
       "has_cover": true,
       "has_file": true
     }
