@@ -1,8 +1,9 @@
 #!/bin/bash
+set -euo pipefail
 # 觸發數位商品銷售深度調研
 # 手動觸發或當銷售遇到瓶頸時執行
 
-REPO_DIR="/home/wayne/workspace/hermes-agent/github/ckw19810413/product-tracking"
+REPO_DIR="/home/wayne/workspace/github/ckw19810413/product-tracking"
 RESEARCH_DIR="$REPO_DIR/research"
 DATA_DIR="$REPO_DIR/data"
 WEEK=$(date +%G-W%V)
