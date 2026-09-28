@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-21",
-  "week": "2026-W39",
+  "date": "2026-09-28",
+  "week": "2026-W40",
   "account": {
     "name": "Kai Wei Chang",
     "bio": null,
@@ -25,7 +25,9 @@
       "ai-workflow-builder",
       "everything-bundle",
       "prompt-library-sample",
-      "workflow-builder-sample"
+      "workflow-builder-sample",
+      "iwtgi",
+      "one-person-studio"
     ],
     "profile_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
     "email": "slashman413@gmail.com",
@@ -34,6 +36,24 @@
   "sales_count": 0,
   "total_revenue_cents": 0,
   "products": [
+    {
+      "name": "The One-Person Studio",
+      "price": "$12",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/one-person-studio",
+      "has_cover": false,
+      "has_file": true
+    },
+    {
+      "name": "Top 10 High-Leverage AI Prompts",
+      "price": "$29+",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/iwtgi",
+      "has_cover": false,
+      "has_file": true
+    },
     {
       "name": "AI Workflow Builder — Free Sample Workflow",
       "price": "$0+",
