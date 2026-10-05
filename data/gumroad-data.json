@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-28",
-  "week": "2026-W40",
+  "date": "2026-10-05",
+  "week": "2026-W41",
   "account": {
     "name": "Kai Wei Chang",
     "bio": null,
@@ -27,7 +27,8 @@
       "prompt-library-sample",
       "workflow-builder-sample",
       "iwtgi",
-      "one-person-studio"
+      "one-person-studio",
+      "wememw"
     ],
     "profile_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
     "email": "slashman413@gmail.com",
@@ -36,6 +37,15 @@
   "sales_count": 0,
   "total_revenue_cents": 0,
   "products": [
+    {
+      "name": "The Ultimate AI Prompt Engineering Guide",
+      "price": "$4.99",
+      "sales_count": 0,
+      "sales_usd_cents": 0.0,
+      "short_url": "https://slashmaster6.gumroad.com/l/wememw",
+      "has_cover": false,
+      "has_file": true
+    },
     {
       "name": "The One-Person Studio",
       "price": "$12",
@@ -114,15 +124,6 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/etf-dashboard",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "Cowork Pro",
-      "price": "$59",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/cowork-pro",
       "has_cover": true,
       "has_file": true
     }
