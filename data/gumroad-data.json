@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-05",
-  "week": "2026-W41",
+  "date": "2026-10-12",
+  "week": "2026-W42",
   "account": {
     "name": "Kai Wei Chang",
     "bio": null,
@@ -43,7 +43,7 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/wememw",
-      "has_cover": false,
+      "has_cover": true,
       "has_file": true
     },
     {
@@ -52,16 +52,16 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/one-person-studio",
-      "has_cover": false,
+      "has_cover": true,
       "has_file": true
     },
     {
       "name": "Top 10 High-Leverage AI Prompts",
-      "price": "$29+",
+      "price": "$9+",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/iwtgi",
-      "has_cover": false,
+      "has_cover": true,
       "has_file": true
     },
     {
