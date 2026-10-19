@@ -5,16 +5,12 @@
 | 產品 | 狀態 | 上架平台 | 價格 | 銷售量 | 收入 | 最後更新 |
 
 |------|------|---------|------|--------|------|---------|
-| The Ultimate AI Prompt Engineering Guide | ✅ 可購買 | Gumroad | $4.99 | 0 | $0.00 | 2026-10-12 |
-| The One-Person Studio | ✅ 可購買 | Gumroad | $12 | 0 | $0.00 | 2026-10-12 |
-| Top 10 High-Leverage AI Prompts | ✅ 可購買 | Gumroad | $9+ | 0 | $0.00 | 2026-10-12 |
-| AI Workflow Builder — Free Sample Workflow | ✅ 可購買 | Gumroad | $0+ | 0 | $0.00 | 2026-10-12 |
-| AI Prompt Library — Free Sample (12 Real Prompts) | ✅ 可購買 | Gumroad | $0+ | 0 | $0.00 | 2026-10-12 |
-| Slashman Tools Everything Bundle — 12 Products + All Future Releases | ✅ 可購買 | Gumroad | $199 | 0 | $0.00 | 2026-10-12 |
-| AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows | ✅ 可購買 | Gumroad | $99 | 0 | $0.00 | 2026-10-12 |
-| AI Developer Stack Bundle: Orchestrate, Ship & Host | ✅ 可購買 | Gumroad | $79 | 0 | $0.00 | 2026-10-12 |
-| AI Starter Bundle: Learn, Prompt & Ship | ✅ 可購買 | Gumroad | $49 | 0 | $0.00 | 2026-10-12 |
-| ETF Dashboard — Track Taiwan High-Yield & Global ETFs | ✅ 可購買 | Gumroad | $29 | 0 | $0.00 | 2026-10-12 |
+| The One-Person Studio | ✅ 可購買 | Gumroad | $12 | 0 | $0.00 | 2026-10-19 |
+| AI Workflow Builder — Free Sample Workflow | ✅ 可購買 | Gumroad | $0+ | 0 | $0.00 | 2026-10-19 |
+| AI Prompt Library — Free Sample (12 Real Prompts) | ✅ 可購買 | Gumroad | $0+ | 0 | $0.00 | 2026-10-19 |
+| AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows | ✅ 可購買 | Gumroad | $99 | 0 | $0.00 | 2026-10-19 |
+| AI Developer Stack Bundle: Orchestrate, Ship & Host | ✅ 可購買 | Gumroad | $79 | 0 | $0.00 | 2026-10-19 |
+| ETF Dashboard — Track Taiwan High-Yield & Global ETFs | ✅ 可購買 | Gumroad | $29 | 0 | $0.00 | 2026-10-19 |
 
 ## 行銷渠道追蹤
 
@@ -39,4 +35,4 @@
 
 |------|------|--------|------|
 
-| 2026-W42 | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |
+| 2026-W43 | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |

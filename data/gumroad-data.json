@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-12",
-  "week": "2026-W42",
+  "date": "2026-10-19",
+  "week": "2026-W43",
   "account": {
     "name": "Kai Wei Chang",
     "bio": null,
@@ -11,24 +11,18 @@
     "url": "https://slashmaster6.gumroad.com",
     "profile_picture_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
     "links": [
-      "njserv",
       "kuvajr",
       "bppdqp",
       "diwoc",
       "vzalgb",
-      "feishu-templates",
       "ship-with-ai",
       "cowork-pro",
       "etf-dashboard",
-      "ai-starter-bundle",
       "ai-dev-stack",
       "ai-workflow-builder",
-      "everything-bundle",
       "prompt-library-sample",
       "workflow-builder-sample",
-      "iwtgi",
-      "one-person-studio",
-      "wememw"
+      "one-person-studio"
     ],
     "profile_url": "https://public-files.gumroad.com/gieiympzhtxy5ry3c9ut9ivo76h2",
     "email": "slashman413@gmail.com",
@@ -38,29 +32,11 @@
   "total_revenue_cents": 0,
   "products": [
     {
-      "name": "The Ultimate AI Prompt Engineering Guide",
-      "price": "$4.99",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/wememw",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
       "name": "The One-Person Studio",
       "price": "$12",
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/one-person-studio",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "Top 10 High-Leverage AI Prompts",
-      "price": "$9+",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/iwtgi",
       "has_cover": true,
       "has_file": true
     },
@@ -83,15 +59,6 @@
       "has_file": true
     },
     {
-      "name": "Slashman Tools Everything Bundle — 12 Products + All Future Releases",
-      "price": "$199",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/everything-bundle",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
       "name": "AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows",
       "price": "$99",
       "sales_count": 0,
@@ -106,15 +73,6 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/ai-dev-stack",
-      "has_cover": true,
-      "has_file": true
-    },
-    {
-      "name": "AI Starter Bundle: Learn, Prompt & Ship",
-      "price": "$49",
-      "sales_count": 0,
-      "sales_usd_cents": 0.0,
-      "short_url": "https://slashmaster6.gumroad.com/l/ai-starter-bundle",
       "has_cover": true,
       "has_file": true
     },
