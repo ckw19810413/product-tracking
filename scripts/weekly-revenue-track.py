@@ -79,7 +79,7 @@ def fetch_all_data():
         if not next_key or next_key == last_key:
             break  # No more pages or infinite loop detected
         last_key = next_key
-        params = f"products?page_token={next_key}"
+        params = f"products?page_key={next_key}"  # Gumroad ignores page_token
     print(f"  Fetched {len(all_products)} products (across pages)")
 
     # Dedup by name (lowercased), keep best version
@@ -103,11 +103,21 @@ def fetch_all_data():
     published = [p for p in all_products if p.get("published")]
     drafts = [p for p in all_products if not p.get("published")]
 
-    # Sales
-    sales_resp = gumroad_get("sales")
+    # Sales (paginated the same way as products)
     sales_data = []
-    if sales_resp.get("success"):
-        sales_data = sales_resp.get("sales", [])
+    params = "sales"
+    last_key = None
+    for page in range(max_pages * 10):
+        sales_resp = gumroad_get(params)
+        if not sales_resp.get("success"):
+            print(f"  ERROR fetching sales: {sales_resp.get('error')}", file=sys.stderr)
+            break
+        sales_data.extend(sales_resp.get("sales", []))
+        next_key = sales_resp.get("next_page_key")
+        if not next_key or next_key == last_key:
+            break
+        last_key = next_key
+        params = f"sales?page_key={next_key}"
 
     print(f"  Account: {account.get('name', 'N/A')} ({account.get('email', 'N/A')})")
     print(f"  Total products: {len(all_products)}")
@@ -327,8 +337,8 @@ def generate_research_report(data):
 
 ## 問題描述
 
-所有 {len(published)} 個已上架產品皆為零銷售 ({len(sales)} 筆交易)。
-這是最關鍵的瓶頸 — 產品已上架但無流量、無曝光、無收入。
+{len(published)} 個已上架產品，共 {len(sales)} 筆交易（Gumroad API，含分頁）。
+{"這是最關鍵的瓶頸 — 產品已上架但無流量、無曝光、無收入。" if not sales else ""}
 
 ## 瓶頸分解
 
@@ -358,8 +368,7 @@ def generate_research_report(data):
 - 描述缺乏 social proof（推薦、評價）
 
 ### 3. 定價策略 (Medium)
-- 需觀察市場對 $49/$297/$197/$19 的接受度
-- 建議先以 $49 產品建立第一筆收入，再逐步提高
+- 目前售價見下方「已上架產品與售價」（取自 Gumroad API）
 
 ## 30 天行動計畫
 
@@ -387,17 +396,11 @@ def generate_research_report(data):
 - [ ] 收集早期客戶反饋
 - [ ] 啟動第二波行銷
 
-## 預估收入
+## 已上架產品與售價
 
-| 產品 | 預估月銷售 | 單價 | 月收入 |
-|------|----------|------|--------|
-| AI Prompt 庫 | 5-20 筆 | $49 | $245-$980 |
-| AI 實戰課程 | 2-10 筆 | $297 | $594-$2,970 |
-| 飛書模板套組 | 3-15 筆 | $197 | $591-$2,955 |
-| ETF 儀表板 | 5-30 筆 | $19 | $95-$570 |
-| **合計** | **15-95 筆** | | **$1,525-$7,475** |
-
-**關鍵假設:** 第一個月累積緩慢，但 30 天內應有第一筆收入。若無收入則需重新評估市場定位。
+"""
+    report += generate_product_table(published)
+    report += f"""
 
 ## 下次調研日期
 
