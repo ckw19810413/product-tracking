@@ -1,7 +1,7 @@
 # 每週數位商品收入報告
 
 ## 2026-W43 (2026-10-19 - 2026-10-25)
-**報告日期:** 2026-10-19
+**報告日期:** 2026-10-23
 **資料來源:** Gumroad API (slashmaster6 / Kai Wei Chang)
 
 ---
@@ -13,8 +13,8 @@
 | 歷史總收入 | **$0.00** |
 | 累計客戶 | 0 |
 | 歷史總銷售 | 0 筆 |
-| 已上架產品 | 6 個 |
-| 草稿產品 | 4 個 |
+| 已上架產品 | 14 個 |
+| 草稿產品 | 0 個 |
 
 ---
 
@@ -25,34 +25,35 @@
 | The One-Person Studio | $12 | 0 | $0.00 | ✅ 可購買 |
 | AI Workflow Builder — Free Sample Workflow | $0+ | 0 | $0.00 | ✅ 可購買 |
 | AI Prompt Library — Free Sample (12 Real Prompts) | $0+ | 0 | $0.00 | ✅ 可購買 |
+| Slashman Tools Everything Bundle — 12 Products + All Future Releases | $199 | 0 | $0.00 | ✅ 可購買 |
 | AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows | $99 | 0 | $0.00 | ✅ 可購買 |
 | AI Developer Stack Bundle: Orchestrate, Ship & Host | $79 | 0 | $0.00 | ✅ 可購買 |
 | ETF Dashboard — Track Taiwan High-Yield & Global ETFs | $29 | 0 | $0.00 | ✅ 可購買 |
+| Cowork Pro | $59 | 0 | $0.00 | ✅ 可購買 |
+| Ship With AI: The 4-Hour Course to Automate Real Work (No Code) | $39 | 0 | $0.00 | ✅ 可購買 |
+| AI Practical Course in Traditional Chinese — 4 Modules, 17 Lessons (Zero to Advanced) | $69 | 0 | $0.00 | ✅ 可購買 |
+| AI Prompt Library — 95+ Battle-Tested Prompts, Copy-Paste Ready | $39 | 0 | $0.00 | ✅ 可購買 |
+| DGX Spark (GB10) Dual-Model LLM Deployment Kit: Run Two Models on One Box Without OOM | $79 | 0 | $0.00 | ✅ 可購買 |
+| SAAS Starter Kit | $99.99 | 0 | $0.00 | ✅ 可購買 |
+| Automation - 2 People Chat News | $19 | 0 | $0.00 | ✅ 可購買 |
 
 ---
 
 ### 草稿/未完成產品
 
-
-| 產品 | 價格 | 狀態 |
-|------|------|------|
-| The Ultimate AI Prompt Engineering Guide | $1.99 | ❌ 草稿 |
-| Top 10 High-Leverage AI Prompts | $9+ | ❌ 草稿 |
-| Slashman Tools Everything Bundle — 12 Products + All Future Releases | $199 | ❌ 草稿 |
-| AI Starter Bundle: Learn, Prompt & Ship | $49 | ❌ 草稿 |
-
+目前無草稿產品。
 
 ---
 
 ### 瓶頸分析
 
-**🟠 瓶頸 1: 6 個已上架產品零銷售**
-- 涉及產品: The One-Person Studio, AI Workflow Builder — Free Sample Workflow, AI Prompt Library — Free Sample (12 Real Prompts), AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows, AI Developer Stack Bundle: Orchestrate, Ship & Host, ETF Dashboard — Track Taiwan High-Yield & Global ETFs
+**🟠 瓶頸 1: 14 個已上架產品零銷售**
+- 涉及產品: The One-Person Studio, AI Workflow Builder — Free Sample Workflow, AI Prompt Library — Free Sample (12 Real Prompts), Slashman Tools Everything Bundle — 12 Products + All Future Releases, AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows, AI Developer Stack Bundle: Orchestrate, Ship & Host, ETF Dashboard — Track Taiwan High-Yield & Global ETFs, Cowork Pro, Ship With AI: The 4-Hour Course to Automate Real Work (No Code), AI Practical Course in Traditional Chinese — 4 Modules, 17 Lessons (Zero to Advanced), AI Prompt Library — 95+ Battle-Tested Prompts, Copy-Paste Ready, DGX Spark (GB10) Dual-Model LLM Deployment Kit: Run Two Models on One Box Without OOM, SAAS Starter Kit, Automation - 2 People Chat News
 - 建議: 需要行銷引流 — Landing Page + Social Media
 
-**🟡 瓶頸 2: 4 個產品仍為草稿狀態**
-- 涉及產品: The Ultimate AI Prompt Engineering Guide, Top 10 High-Leverage AI Prompts, Slashman Tools Everything Bundle — 12 Products + All Future Releases, AI Starter Bundle: Learn, Prompt & Ship
-- 建議: 完成草稿產品上架
+**🔴 瓶頸 2: 1 個已上架產品缺少實際內容檔**
+- 涉及產品: AI Prompt Library — 95+ Battle-Tested Prompts, Copy-Paste Ready
+- 建議: 上傳產品內容檔案，否則無法交付
 
 ### 關鍵洞察
 
@@ -80,4 +81,4 @@
 ---
 
 *資料來源: Gumroad REST API v2 (自動抓取)*
-*生成時間: 2026-10-19 10:00 CST*
+*生成時間: 2026-10-23 21:22 CST*
