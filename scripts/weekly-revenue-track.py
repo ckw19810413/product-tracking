@@ -28,14 +28,26 @@ WEEK_END = (datetime.now() + timedelta(days=6 - datetime.now().weekday())).strft
 GUMROAD_BASE = "https://api.gumroad.com/v2"
 
 
+# Account fields written to data/gumroad-data.json (committed): no email/PII.
+ACCOUNT_FIELDS = ("name", "display_name", "id", "user_id", "url", "currency_type")
+
+
+class IncompleteData(Exception):
+    """A Gumroad page failed, so totals would be silently wrong."""
+
+
 def gumroad_get(endpoint):
-    """Fetch from Gumroad API using curl (reliable)."""
+    """Fetch from Gumroad API using curl (reliable).
+
+    The token goes in an Authorization header passed on curl's stdin config
+    (`-K -`), so it never appears in argv (ps) or in the URL.
+    """
     token = open(TOKEN_FILE).read().strip()
-    sep = "&" if "?" in endpoint else "?"
-    url = f"{GUMROAD_BASE}/{endpoint}{sep}access_token={token}"
+    url = f"{GUMROAD_BASE}/{endpoint}"
     try:
         result = subprocess.run(
-            ["curl", "-s", "-f", "--connect-timeout", "10", url],
+            ["curl", "-s", "-f", "--connect-timeout", "10", "-K", "-", url],
+            input=f'header = "Authorization: Bearer {token}"\n',
             capture_output=True, text=True, timeout=30
         )
         if result.returncode != 0:
@@ -69,8 +81,7 @@ def fetch_all_data():
     for page in range(max_pages):
         resp = gumroad_get(params)
         if not resp.get("success"):
-            print(f"  ERROR fetching products: {resp.get('error')}", file=sys.stderr)
-            break
+            raise IncompleteData(f"products page {page + 1}: {resp.get('error')}")
         products_page = resp.get("products", [])
         if not products_page:
             break  # No more products
@@ -110,8 +121,7 @@ def fetch_all_data():
     for page in range(max_pages * 10):
         sales_resp = gumroad_get(params)
         if not sales_resp.get("success"):
-            print(f"  ERROR fetching sales: {sales_resp.get('error')}", file=sys.stderr)
-            break
+            raise IncompleteData(f"sales page {page + 1}: {sales_resp.get('error')}")
         sales_data.extend(sales_resp.get("sales", []))
         next_key = sales_resp.get("next_page_key")
         if not next_key or next_key == last_key:
@@ -119,7 +129,7 @@ def fetch_all_data():
         last_key = next_key
         params = f"sales?page_key={next_key}"
 
-    print(f"  Account: {account.get('name', 'N/A')} ({account.get('email', 'N/A')})")
+    print(f"  Account: {account.get('name', 'N/A')}")
     print(f"  Total products: {len(all_products)}")
     print(f"  Published: {len(published)}")
     print(f"  Drafts: {len(drafts)}")
@@ -275,7 +285,8 @@ def generate_weekly_report(data):
 def save_gumroad_data(data):
     """Save raw Gumroad data as JSON."""
     output = {
-        "date": DATE, "week": WEEK, "account": data["account"],
+        "date": DATE, "week": WEEK,
+        "account": {k: data["account"][k] for k in ACCOUNT_FIELDS if k in data["account"]},
         "sales_count": len(data["sales"]),
         "total_revenue_cents": sum(s.get("price_cents", 0) for s in data["sales"]),
         "products": []
@@ -431,7 +442,13 @@ def main():
     print("🚀 Weekly Digital Product Revenue Tracker")
     print(f"📅 Week: {WEEK}, Date: {DATE}")
 
-    data = fetch_all_data()
+    try:
+        data = fetch_all_data()
+    except IncompleteData as e:
+        # Abort before writing or pushing anything: a partial page would
+        # under-count sales/revenue in a report that looks complete.
+        print(f"ERROR: DATA INCOMPLETE ({e}). Aborting, nothing written.", file=sys.stderr)
+        sys.exit(1)
     if not data:
         print("ERROR: Failed to fetch Gumroad data. Aborting.", file=sys.stderr)
         sys.exit(1)
