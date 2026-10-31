@@ -14,7 +14,9 @@ import requests
 from datetime import datetime
 
 # 載入配置 (OAuth 1.0a — @KWC59125740, read/write)
-config_path = "/home/wayne/.priv/twitter-api-config.sh"
+PRIV_DIR = os.environ.get("PRIV_DIR", os.path.expanduser("~/.priv"))
+REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+config_path = os.path.join(PRIV_DIR, "twitter-api-config.sh")
 config = {}
 with open(config_path) as f:
     for line in f:
@@ -28,8 +30,8 @@ API_KEY = config.get("X_API_KEY", "")
 API_SECRET = config.get("X_API_SECRET", "")
 ACCESS_TOKEN = config.get("X_ACCESS_TOKEN", "")
 ACCESS_SECRET = config.get("X_ACCESS_SECRET") or config.get("X_ACCESS_TOKEN_SECRET", "")
-CONTENT_CALENDAR = "/home/wayne/workspace/github/ckw19810413/product-tracking/marketing-assets/twitter-x-content-calendar.json"
-TWEET_SENT_FILE = "/home/wayne/workspace/github/ckw19810413/product-tracking/data/tweet-sent.json"
+CONTENT_CALENDAR = os.path.join(REPO_DIR, "marketing-assets/twitter-x-content-calendar.json")
+TWEET_SENT_FILE = os.path.join(REPO_DIR, "data/tweet-sent.json")
 
 # 若 OAuth 1.0a 憑證不完整, 改用 xurl (已配置 oauth1) 作為備援
 XURL_FALLBACK = bool(API_KEY and API_SECRET and ACCESS_TOKEN and ACCESS_SECRET) is False

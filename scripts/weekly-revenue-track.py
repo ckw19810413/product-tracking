@@ -15,10 +15,12 @@ from pathlib import Path
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 
-TOKEN_FILE = "/home/wayne/.priv/slashmaster6-gumroad-token"
-TRACKING_DIR = "/home/wayne/workspace/github/ckw19810413/product-tracking"
-RESEARCH_DIR = "/home/wayne/workspace/github/ckw19810413/digital-product-research"
-SSH_KEY = "/home/wayne/.ssh/id_ed25519_gh"
+# Override any of these via env; defaults resolve relative to $HOME and this repo.
+PRIV_DIR = os.environ.get("PRIV_DIR", os.path.expanduser("~/.priv"))
+TOKEN_FILE = os.environ.get("GUMROAD_TOKEN_FILE", os.path.join(PRIV_DIR, "slashmaster6-gumroad-token"))
+TRACKING_DIR = os.environ.get("TRACKING_DIR", str(Path(__file__).resolve().parent.parent))
+RESEARCH_DIR = os.environ.get("RESEARCH_DIR", os.path.join(os.path.dirname(TRACKING_DIR), "digital-product-research"))
+SSH_KEY = os.environ.get("SSH_KEY", os.path.expanduser("~/.ssh/id_ed25519_gh"))
 
 DATE = datetime.now().strftime("%Y-%m-%d")
 WEEK = datetime.now().strftime("%Y-W%V")
