@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-26",
-  "week": "2026-W44",
+  "date": "2026-11-02",
+  "week": "2026-W45",
   "account": {
     "name": "Kai Wei Chang",
     "display_name": "Kai Wei Chang",
@@ -18,7 +18,7 @@
       "sales_count": 0,
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/line-chat-generator-pro",
-      "has_cover": false,
+      "has_cover": true,
       "has_file": false
     },
     {
@@ -55,7 +55,7 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/everything-bundle",
       "has_cover": true,
-      "has_file": true
+      "has_file": false
     },
     {
       "name": "AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows",
