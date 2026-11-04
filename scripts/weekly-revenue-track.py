@@ -38,6 +38,11 @@ class IncompleteData(Exception):
     """A Gumroad page failed, so totals would be silently wrong."""
 
 
+def has_product_deliverable(p):
+    """Return True if a product has downloadable files or rich_content delivery."""
+    return bool(p.get("files") or p.get("rich_content"))
+
+
 def gumroad_get(endpoint):
     """Fetch from Gumroad API using curl (reliable).
 
@@ -65,7 +70,7 @@ def gumroad_get(endpoint):
 
 
 def fetch_all_data():
-    """Fetch account, products, and sales data."""
+    """Fetch account, products (with single-product detail), and sales data."""
     print("=== Fetching Gumroad data ===")
 
     # Account
@@ -95,6 +100,21 @@ def fetch_all_data():
         params = f"products?page_key={next_key}"  # Gumroad ignores page_token
     print(f"  Fetched {len(all_products)} products (across pages)")
 
+    # Enrich each product from the single-product API (`files` and `rich_content`
+    # are only populated on `/v2/products/<id>`, whereas list `file_info` is empty).
+    for p in all_products:
+        pid = p.get("id")
+        if not pid:
+            continue
+        detail_resp = gumroad_get(f"products/{pid}")
+        if not detail_resp.get("success"):
+            raise IncompleteData(f"product detail {pid}: {detail_resp.get('error')}")
+        detail = detail_resp.get("product", {})
+        p["files"] = detail.get("files") or []
+        p["rich_content"] = detail.get("rich_content") or []
+        if "tags" in detail:
+            p["tags"] = detail.get("tags") or []
+
     # Dedup by name (lowercased), keep best version
     # Gumroad creates duplicate entries with different IDs for the same product
     seen_names = {}
@@ -104,8 +124,8 @@ def fetch_all_data():
             continue
         if name in seen_names:
             old = seen_names[name]
-            old_score = (1 if old.get("published") else 0) + (1 if old.get("covers") else 0) + (1 if old.get("file_info") and old["file_info"] else 0)
-            new_score = (1 if p.get("published") else 0) + (1 if p.get("covers") else 0) + (1 if p.get("file_info") and p["file_info"] else 0)
+            old_score = (1 if old.get("published") else 0) + (1 if old.get("covers") else 0) + (1 if has_product_deliverable(old) else 0)
+            new_score = (1 if p.get("published") else 0) + (1 if p.get("covers") else 0) + (1 if has_product_deliverable(p) else 0)
             if new_score > old_score:
                 seen_names[name] = p
         else:
@@ -154,13 +174,13 @@ def generate_product_table(products):
         price = p.get("formatted_price", "N/A")
         sc = p.get("sales_count", 0)
         sr = p.get("sales_usd_cents", 0) / 100.0
-        status = "✅ 可購買" if p.get("covers") else "⚠️ 缺封面"
+        status = "✅ 可購買" if (p.get("covers") and has_product_deliverable(p)) else "⚠️ 待檢查"
         lines.append(f"| {name} | {price} | {sc} | ${sr:.2f} | {status} |")
     return "\n".join(lines)
 
 
 def generate_bottleneck_analysis(data):
-    """Analyze bottlenecks and generate insights."""
+    """Analyze bottlenecks and generate data-driven insights."""
     published = data["products"]["published"]
     drafts = data["products"]["drafts"]
     sales = data["sales"]
@@ -169,33 +189,34 @@ def generate_bottleneck_analysis(data):
 
     zero_sales = [p for p in published if p.get("sales_count", 0) == 0]
     if zero_sales:
-        bottlenecks.append({"type": "zero_sales", "severity": "high", "message": f"{len(zero_sales)} 個已上架產品零銷售", "products": [p.get("name") for p in zero_sales], "recommendation": "需要行銷引流 — Landing Page + Social Media"})
+        bottlenecks.append({"type": "zero_sales", "severity": "high", "message": f"{len(zero_sales)} 個已上架產品零銷售", "products": [p.get("name") for p in zero_sales], "recommendation": "優化現有商品頁導購連結與轉換漏斗追蹤"})
 
     no_cover = [p for p in published if not p.get("covers")]
     if no_cover:
-        bottlenecks.append({"type": "missing_covers", "severity": "medium", "message": f"{len(no_cover)} 個已上架產品缺少封面圖", "products": [p.get("name") for p in no_cover], "recommendation": "加上高品質封面圖可提升轉換率 2-3 倍"})
+        bottlenecks.append({"type": "missing_covers", "severity": "medium", "message": f"{len(no_cover)} 個已上架產品缺少封面圖", "products": [p.get("name") for p in no_cover], "recommendation": "補齊產品封面圖"})
 
-    no_file = [p for p in published if not (p.get("file_info") and p.get("file_info"))]
+    no_file = [p for p in published if not has_product_deliverable(p)]
     if no_file:
-        bottlenecks.append({"type": "missing_files", "severity": "critical", "message": f"{len(no_file)} 個已上架產品缺少實際內容檔", "products": [p.get("name") for p in no_file], "recommendation": "上傳產品內容檔案，否則無法交付"})
+        bottlenecks.append({"type": "missing_files", "severity": "critical", "message": f"{len(no_file)} 個已上架產品缺少實際內容檔或 Rich Content", "products": [p.get("name") for p in no_file], "recommendation": "上傳產品內容檔案或設定 Rich Content，否則無法交付"})
+
+    no_tags = [p for p in published if not p.get("tags")]
+    if no_tags:
+        bottlenecks.append({"type": "missing_tags", "severity": "medium", "message": f"{len(no_tags)} 個已上架產品缺少標籤 (tags)", "products": [p.get("name") for p in no_tags], "recommendation": "為缺少標籤的產品補上相關標籤"})
 
     if drafts:
-        bottlenecks.append({"type": "draft_products", "severity": "medium", "message": f"{len(drafts)} 個產品仍為草稿狀態", "products": [p.get("name") for p in drafts], "recommendation": "完成草稿產品上架"})
+        bottlenecks.append({"type": "draft_products", "severity": "medium", "message": f"{len(drafts)} 個產品仍為草稿狀態", "products": [p.get("name") for p in drafts], "recommendation": "評估是否完成草稿產品上架或清理"})
 
     total_rev = sum(s.get("price_cents", 0) for s in sales)
     if total_rev == 0 and len(published) > 0:
-        insights.append("⚠️ 歷史總收入為 $0 — 產品已上架但無流量或轉換")
-        insights.append("→ 優先事項：建立 Landing Page 並導入外部流量")
-        insights.append("→ 第二優先：優化產品頁面（封面、描述、social proof）")
-        insights.append("→ 第三優先：啟動 social media 行銷（Twitter/X、Reddit、Gumroad 平台）")
+        insights.append("⚠️ 歷史總收入為 $0 — 產品已上架且具備交付內容，需聚焦導購轉換")
     else:
         insights.append(f"💰 歷史總收入: ${total_rev / 100:.2f}")
 
     insights.append("")
-    insights.append("### Gumroad 優化建議")
-    insights.append("- 產品標籤 (tags) 全部空白 → 加上 6-10 個相關標籤可增加平台內發現")
-    insights.append("- 所有產品皆無 cover image → 加上封面圖可提升 40-80% 點擊率")
-    insights.append("- 建議定價策略：$49 (Prompt 庫) / $297 (AI 課程) / $197 (模板套組) / $19 (ETF 儀表板)")
+    insights.append("### Gumroad 產品健康度（API 實測）")
+    insights.append(f"- 內容交付 (files / rich_content)：{len(published) - len(no_file)}/{len(published)} 個已上架產品具備檔案或 Rich Content 交付")
+    insights.append(f"- 產品封面 (covers)：{len(published) - len(no_cover)}/{len(published)} 個已上架產品已設定封面圖")
+    insights.append(f"- 產品標籤 (tags)：{len(published) - len(no_tags)}/{len(published)} 個已上架產品已設定標籤")
 
     return bottlenecks, insights
 
@@ -264,17 +285,17 @@ def generate_weekly_report(data):
     for insight in insights:
         report += f"{insight}\n"
 
+    action_lines = [f"- [ ] {b['recommendation']}（{b['message']}）" for b in bottlenecks]
+    if not action_lines:
+        action_lines.append("- [ ] 持續追蹤各產品頁面轉換率與銷售數據")
+    action_block = "\n".join(action_lines)
+
     report += f"""
 ---
 
 ### 下週行動項目
 
-- [ ] 為所有已上架產品加上封面圖（高品質 PNG）
-- [ ] 為每個產品加上 6-10 個標籤 (tags)
-- [ ] 建立 Landing Page (Next.js → Vercel 部署)
-- [ ] 啟動 Twitter/X 帳號，每天 1-2 則內容
-- [ ] 加入 Reddit 相關社群推廣
-- [ ] 分析流量來源，優化轉換漏斗
+{action_block}
 
 ---
 
@@ -298,7 +319,10 @@ def save_gumroad_data(data):
             "name": p.get("name", "Unknown"), "price": p.get("formatted_price", "N/A"),
             "sales_count": p.get("sales_count", 0), "sales_usd_cents": p.get("sales_usd_cents", 0),
             "short_url": p.get("short_url", ""), "has_cover": bool(p.get("covers")),
-            "has_file": bool(p.get("file_info") and p.get("file_info"))
+            "has_file": has_product_deliverable(p),
+            "files_count": len(p.get("files") or []),
+            "has_rich_content": bool(p.get("rich_content")),
+            "tags_count": len(p.get("tags") or [])
         })
     os.makedirs(os.path.join(TRACKING_DIR, "data"), exist_ok=True)
     with open(os.path.join(TRACKING_DIR, "data/gumroad-data.json"), "w") as f:
@@ -307,7 +331,7 @@ def save_gumroad_data(data):
 
 
 def update_tracking_readme(data):
-    """Update data/README.md with current product status."""
+    """Update data/README.md with current product status derived from API data."""
     published = data["products"]["published"]
     lines = ["# 數位商品追蹤數據\n", "## 產品狀態\n",
              "| 產品 | 狀態 | 上架平台 | 價格 | 銷售量 | 收入 | 最後更新 |\n",
@@ -317,18 +341,20 @@ def update_tracking_readme(data):
         price = p.get("formatted_price", "N/A")
         sc = p.get("sales_count", 0)
         sr = p.get("sales_usd_cents", 0) / 100.0
-        status_icon = "✅ 可購買" if p.get("covers") else "⚠️ 待優化"
+        status_icon = "✅ 可購買" if (p.get("covers") and has_product_deliverable(p)) else "⚠️ 待檢查"
         lines.append(f"| {name} | {status_icon} | Gumroad | {price} | {sc} | ${sr:.2f} | {DATE} |")
 
-    lines += ["\n## 行銷渠道追蹤\n", "| 渠道 | 狀態 | 目標 | 優先級 |\n", "|------|------|------|--------|\n",
-              "| Landing Page | ⏳ 待建 | 轉換流量入口 | 最高 |\n",
-              "| Twitter/X | ⏳ 待建 | 冷啟動獲客 | 高 |\n",
-              "| Reddit 社群 | ⏳ 待建 | 精準流量 | 中 |\n",
-              "| Gumroad 平台內 | ✅ 可觸及 | 自然流量 | 中 |\n",
-              "| Email List | ⏳ 待建 | 回購/升級 | 低 |\n"]
-
-    lines += [f"\n## 每週目標\n", f"| 週期 | 目標 | 達成率 | 備註 |\n", f"|------|------|--------|------|\n",
-              f"| {WEEK} | 上架全部產品 + 啟動 Landing Page | ⬚ 0% | 瓶頸: 無流量 |\n"]
+    with_files = sum(1 for p in published if has_product_deliverable(p))
+    with_covers = sum(1 for p in published if p.get("covers"))
+    with_tags = sum(1 for p in published if p.get("tags"))
+    lines += [
+        "\n## 產品目錄健康度（API 實測）\n",
+        "| 檢查項目 | 通過數 / 已上架總數 |\n",
+        "|----------|---------------------|\n",
+        f"| 交付內容 (`files` / `rich_content`) | {with_files} / {len(published)} |\n",
+        f"| 產品封面 (`covers`) | {with_covers} / {len(published)} |\n",
+        f"| 產品標籤 (`tags`) | {with_tags} / {len(published)} |\n",
+    ]
 
     with open(os.path.join(TRACKING_DIR, "data/README.md"), "w") as f:
         f.write("\n".join(lines))
@@ -344,14 +370,13 @@ def generate_research_report(data):
     report = f"""# 數位商品瓶頸分析 — {DATE}
 
 **觸發日期:** {DATE}
-**瓶頸類型:** revenue-zero / marketing-gap
-**嚴重程度:** high
+**瓶頸類型:** {"revenue-zero / conversion-gap" if not sales else "active-monitoring"}
+**嚴重程度:** {"high" if not sales else "low"}
 **報告週期:** {WEEK}
 
 ## 問題描述
 
-{len(published)} 個已上架產品，共 {len(sales)} 筆交易（Gumroad API，含分頁）。
-{"這是最關鍵的瓶頸 — 產品已上架但無流量、無曝光、無收入。" if not sales else ""}
+{len(published)} 個已上架產品，共 {len(sales)} 筆交易（Gumroad API，含分頁與單品 API 檢查）。
 
 ## 瓶頸分解
 
@@ -365,50 +390,11 @@ def generate_research_report(data):
     else:
         report += "目前無主要瓶頸。\n\n"
 
-    report += """## 根因分析
+    report += "## 關鍵洞察（API 實測）\n\n"
+    for insight in insights:
+        report += f"{insight}\n"
 
-### 1. 流量來源為零 (Critical)
-- 無 Landing Page 作為轉換入口
-- 無 Twitter/X 帳號運營
-- 無 Reddit/社群參與
-- 無 SEO 自然流量
-
-**影響:** 潛在客戶找不到你的產品。Gumroad 平台內流量也需要產品有標籤、有評價。
-
-### 2. 產品頁面不完整 (High)
-- 多個產品缺少封面圖 → 點擊率低
-- 所有產品標籤 (tags) 空白 → 平台內不可發現
-- 描述缺乏 social proof（推薦、評價）
-
-### 3. 定價策略 (Medium)
-- 目前售價見下方「已上架產品與售價」（取自 Gumroad API）
-
-## 30 天行動計畫
-
-### 第 1 週：基礎建設 (Day 1-7)
-- [ ] 建立 Landing Page (Next.js + Vercel, 免費)
-- [ ] 所有已上架產品加上高品質封面圖 (Flux AI 生成)
-- [ ] 為每個產品加上 6-10 個標籤 (tags)
-- [ ] 在 Gumroad 加入免費預覽內容
-
-### 第 2 週：冷啟動 (Day 8-14)
-- [ ] 建立 Twitter/X 帳號 (@slashman6)
-- [ ] 每天發布 1-2 則相關內容
-- [ ] 加入 Reddit: r/AI, r/ChatGPT, r/SaaS, r/gumroad
-- [ ] 發布 Gumroad 上架公告 (Gumroad social channels)
-
-### 第 3 週：擴張 (Day 15-21)
-- [ ] 啟動 LinkedIn 專業內容
-- [ ] 嘗試 Gumroad 付費推廣 ($5-10/天)
-- [ ] 建立 Email List (Mailchimp/ConvertKit)
-- [ ] 加入 HuggingFace / GitHub 社群
-
-### 第 4 週：優化 (Day 22-30)
-- [ ] 分析流量來源數據
-- [ ] 調整定價策略
-- [ ] 收集早期客戶反饋
-- [ ] 啟動第二波行銷
-
+    report += """
 ## 已上架產品與售價
 
 """
@@ -472,16 +458,19 @@ def main():
     # Generate research bottleneck report
     generate_research_report(data)
 
-    # Push to GitHub (both repos)
-    if push_repo(TRACKING_DIR, f"feat: {WEEK} weekly revenue report"):
-        print("  → Pushed product-tracking repo")
+    if os.environ.get("NO_GIT_PUSH") == "1":
+        print("  → Skipping git push (NO_GIT_PUSH=1)")
     else:
-        print("  ⚠️ Could not push product-tracking repo (may have conflicts)")
+        # Push to GitHub (both repos)
+        if push_repo(TRACKING_DIR, f"feat: {WEEK} weekly revenue report"):
+            print("  → Pushed product-tracking repo")
+        else:
+            print("  ⚠️ Could not push product-tracking repo (may have conflicts)")
 
-    if push_repo(RESEARCH_DIR, f"docs: {WEEK} bottleneck analysis"):
-        print("  → Pushed digital-product-research repo")
-    else:
-        print("  ⚠️ Could not push digital-product-research repo (may have conflicts)")
+        if push_repo(RESEARCH_DIR, f"docs: {WEEK} bottleneck analysis"):
+            print("  → Pushed digital-product-research repo")
+        else:
+            print("  ⚠️ Could not push digital-product-research repo (may have conflicts)")
 
     # Summary
     total_rev = sum(s.get("price_cents", 0) for s in data["sales"])
