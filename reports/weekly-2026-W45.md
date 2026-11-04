@@ -1,7 +1,7 @@
 # 每週數位商品收入報告
 
 ## 2026-W45 (2026-11-02 - 2026-11-08)
-**報告日期:** 2026-11-02
+**報告日期:** 2026-11-04
 **資料來源:** Gumroad API (slashmaster6 / Kai Wei Chang)
 
 ---
@@ -50,36 +50,24 @@
 
 **🟠 瓶頸 1: 15 個已上架產品零銷售**
 - 涉及產品: LINE 對話生成器 Pro 授權 · LINE Chat Generator Pro, The One-Person Studio, AI Workflow Builder — Free Sample Workflow, AI Prompt Library — Free Sample (12 Real Prompts), Slashman Tools Everything Bundle — 12 Products + All Future Releases, AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows, AI Developer Stack Bundle: Orchestrate, Ship & Host, ETF Dashboard — Track Taiwan High-Yield & Global ETFs, Cowork Pro, Ship With AI: The 4-Hour Course to Automate Real Work (No Code), AI Practical Course in Traditional Chinese — 4 Modules, 17 Lessons (Zero to Advanced), AI Prompt Library — 95+ Battle-Tested Prompts, Copy-Paste Ready, DGX Spark (GB10) Dual-Model LLM Deployment Kit: Run Two Models on One Box Without OOM, SAAS Starter Kit, Automation - 2 People Chat News
-- 建議: 需要行銷引流 — Landing Page + Social Media
-
-**🔴 瓶頸 2: 3 個已上架產品缺少實際內容檔**
-- 涉及產品: LINE 對話生成器 Pro 授權 · LINE Chat Generator Pro, Slashman Tools Everything Bundle — 12 Products + All Future Releases, AI Prompt Library — 95+ Battle-Tested Prompts, Copy-Paste Ready
-- 建議: 上傳產品內容檔案，否則無法交付
+- 建議: 優化現有商品頁導購連結與轉換漏斗追蹤
 
 ### 關鍵洞察
 
-⚠️ 歷史總收入為 $0 — 產品已上架但無流量或轉換
-→ 優先事項：建立 Landing Page 並導入外部流量
-→ 第二優先：優化產品頁面（封面、描述、social proof）
-→ 第三優先：啟動 social media 行銷（Twitter/X、Reddit、Gumroad 平台）
+⚠️ 歷史總收入為 $0 — 產品已上架且具備交付內容，需聚焦導購轉換
 
-### Gumroad 優化建議
-- 產品標籤 (tags) 全部空白 → 加上 6-10 個相關標籤可增加平台內發現
-- 所有產品皆無 cover image → 加上封面圖可提升 40-80% 點擊率
-- 建議定價策略：$49 (Prompt 庫) / $297 (AI 課程) / $197 (模板套組) / $19 (ETF 儀表板)
+### Gumroad 產品健康度（API 實測）
+- 內容交付 (files / rich_content)：15/15 個已上架產品具備檔案或 Rich Content 交付
+- 產品封面 (covers)：15/15 個已上架產品已設定封面圖
+- 產品標籤 (tags)：15/15 個已上架產品已設定標籤
 
 ---
 
 ### 下週行動項目
 
-- [ ] 為所有已上架產品加上封面圖（高品質 PNG）
-- [ ] 為每個產品加上 6-10 個標籤 (tags)
-- [ ] 建立 Landing Page (Next.js → Vercel 部署)
-- [ ] 啟動 Twitter/X 帳號，每天 1-2 則內容
-- [ ] 加入 Reddit 相關社群推廣
-- [ ] 分析流量來源，優化轉換漏斗
+- [ ] 優化現有商品頁導購連結與轉換漏斗追蹤（15 個已上架產品零銷售）
 
 ---
 
 *資料來源: Gumroad REST API v2 (自動抓取)*
-*生成時間: 2026-11-02 10:01 CST*
+*生成時間: 2026-11-04 21:25 CST*

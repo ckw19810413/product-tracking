@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-04",
   "week": "2026-W45",
   "account": {
     "name": "Kai Wei Chang",
@@ -19,7 +19,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/line-chat-generator-pro",
       "has_cover": true,
-      "has_file": false
+      "has_file": true,
+      "files_count": 0,
+      "has_rich_content": true,
+      "tags_count": 15
     },
     {
       "name": "The One-Person Studio",
@@ -28,7 +31,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/one-person-studio",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 20
     },
     {
       "name": "AI Workflow Builder — Free Sample Workflow",
@@ -37,7 +43,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/workflow-builder-sample",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 8
     },
     {
       "name": "AI Prompt Library — Free Sample (12 Real Prompts)",
@@ -46,7 +55,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/prompt-library-sample",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 8
     },
     {
       "name": "Slashman Tools Everything Bundle — 12 Products + All Future Releases",
@@ -55,7 +67,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/everything-bundle",
       "has_cover": true,
-      "has_file": false
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 15
     },
     {
       "name": "AI Workflow Builder — Turn Prompts into Validated Multi-Agent Workflows",
@@ -64,7 +79,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/ai-workflow-builder",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 20
     },
     {
       "name": "AI Developer Stack Bundle: Orchestrate, Ship & Host",
@@ -73,7 +91,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/ai-dev-stack",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 20
     },
     {
       "name": "ETF Dashboard — Track Taiwan High-Yield & Global ETFs",
@@ -82,7 +103,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/etf-dashboard",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 20
     },
     {
       "name": "Cowork Pro",
@@ -91,7 +115,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/cowork-pro",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": true,
+      "tags_count": 20
     },
     {
       "name": "Ship With AI: The 4-Hour Course to Automate Real Work (No Code)",
@@ -100,7 +127,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/ship-with-ai",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": true,
+      "tags_count": 20
     },
     {
       "name": "AI Practical Course in Traditional Chinese — 4 Modules, 17 Lessons (Zero to Advanced)",
@@ -109,7 +139,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/vzalgb",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": true,
+      "tags_count": 20
     },
     {
       "name": "AI Prompt Library — 95+ Battle-Tested Prompts, Copy-Paste Ready",
@@ -118,7 +151,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/diwoc",
       "has_cover": true,
-      "has_file": false
+      "has_file": true,
+      "files_count": 3,
+      "has_rich_content": true,
+      "tags_count": 20
     },
     {
       "name": "DGX Spark (GB10) Dual-Model LLM Deployment Kit: Run Two Models on One Box Without OOM",
@@ -127,7 +163,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/bppdqp",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": false,
+      "tags_count": 20
     },
     {
       "name": "SAAS Starter Kit",
@@ -136,7 +175,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/kuvajr",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": true,
+      "tags_count": 20
     },
     {
       "name": "Automation - 2 People Chat News",
@@ -145,7 +187,10 @@
       "sales_usd_cents": 0.0,
       "short_url": "https://slashmaster6.gumroad.com/l/njserv",
       "has_cover": true,
-      "has_file": true
+      "has_file": true,
+      "files_count": 1,
+      "has_rich_content": true,
+      "tags_count": 20
     }
   ]
 }
